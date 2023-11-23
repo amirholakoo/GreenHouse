@@ -5,9 +5,9 @@ This project involves creating an automated control system for a greenhouse, usi
 
 ## Features
 - Real-time temperature and humidity monitoring.
-- Web interface for manual and automatic control of IR lamps and fans.
+- Web interface for manual and automatic control of IR lamps and fans. 'chart.php'
 - BLE integration for inter-device communication in future.
-- Data logging with PHP and MySQL.
+- Data logging with PHP and MySQL. 'data_logger.php'
 
 ## Setup and Installation
 Provide detailed instructions on how to set up the project:
