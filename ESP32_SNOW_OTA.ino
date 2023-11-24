@@ -4,12 +4,18 @@
 #include <ESPmDNS.h>
 #include <Update.h>
 
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+const char* host = "Greenhouse154";   //<<<<<<<<<<<<<<
+IPAddress staticIP(192, 168, 1, 154); //<<<<<<<<<<<<<<
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 
-const char* host = "Greenhouse150";
-const char* ssid = "VPN1";
-const char* password = "09126141426";
 
-IPAddress staticIP(192, 168, 1, 150); //<<<<<<<<<<<<<<
+const char* ssid = "XXX";
+const char* password = "XXX";
+
+
 IPAddress gateway(192, 168, 1, 1);    // Gateway 
 IPAddress subnet(255, 255, 255, 0);   // Subnet mask
 
