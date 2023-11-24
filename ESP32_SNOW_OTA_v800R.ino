@@ -7,19 +7,19 @@
 #include <Update.h>
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-const char* ssid = "XXX";
+const char* ssid = "XXX";             //<<<<<<<<<<<<<<
 const char* password = "XXX";
 
-IPAddress staticIP(192, 168, 1, 150); //<<<<<<<<<<<<<<
+IPAddress staticIP(192, 168, 1, 154); //<<<<<<<<<<<<<<
 IPAddress gateway(192, 168, 1, 1);    // Gateway 
 IPAddress subnet(255, 255, 255, 0);   // Subnet mask
 
 float autoTempThreshold = 3.0;
 float maxTemp = 25.0;
 float minTemp = 8.0;
-String deviceName = "Greenhouse150"; // Unique name for each device
-const char* host = "Greenhouse150";
-String folder = "0";
+String deviceName = "Greenhouse154"; //<<<<<<<<<<<<<<
+const char* host = "Greenhouse154";  //<<<<<<<<<<<<<<
+String folder = "4";                 //<<<<<<<<<<<<<<
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -147,10 +147,11 @@ void loop() {
   if (currentTime - lastSendTime > 300000) { // Send data every 5 minutes
         float localTemp = dht.readTemperature();
         if (localTemp != -1) { // Ensure local temperature reading is valid
-            //sendDataToPeer("192.168.1.150", localTemp); // Replace with actual peer IP
+            sendDataToPeer("192.168.1.150", localTemp); // Replace with actual peer IP
             sendDataToPeer("192.168.1.151", localTemp);
             sendDataToPeer("192.168.1.152", localTemp);
             sendDataToPeer("192.168.1.153", localTemp);
+            //sendDataToPeer("192.168.1.154", localTemp);
         }
     lastSendTime = currentTime;
   }
@@ -418,3 +419,4 @@ void processReceivedData(const String& sender, float temp) {
     // Here you can add logic to compare this temperature with your local readings
     // and make decisions based on that.
 }
+
