@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "admin"; // Your MySQL username
-$password = "pi"; // Your MySQL password
+$username = "XXX"; // Your MySQL username
+$password = "XXX"; // Your MySQL password
 $dbname = "GreenhouseDB";
 
 // Create connection
