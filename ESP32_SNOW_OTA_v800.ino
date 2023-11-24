@@ -7,8 +7,8 @@
 #include <Update.h>
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-const char* ssid = "VPN1";
-const char* password = "09126141426";
+const char* ssid = "XXX";
+const char* password = "XXX";
 
 IPAddress staticIP(192, 168, 1, 150); //<<<<<<<<<<<<<<
 IPAddress gateway(192, 168, 1, 1);    // Gateway 
